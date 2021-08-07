@@ -1,9 +1,9 @@
 package com.ix.ibrahim7.ps.mvpdesignpatternsloginvalidation.presenter
 
 import com.ix.ibrahim7.ps.mvpdesignpatternsloginvalidation.model.User
-import com.ix.ibrahim7.ps.mvpdesignpatternsloginvalidation.view.ILoginView
+import com.ix.ibrahim7.ps.mvpdesignpatternsloginvalidation.ui.views.ILoginView
 
-class LoginPresenter(private var isLoginView:ILoginView) : ILoginPresenter {
+class LoginPresenter(private var isLoginView: ILoginView) : ILoginPresenter {
 
     override fun onLogin(email: String, password: String) {
      val user = User(email, password)

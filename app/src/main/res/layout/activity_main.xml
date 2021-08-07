@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".ui.activity.MainActivity">
 
         <TextView
             android:id="@+id/textView2"
@@ -61,8 +61,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="start"
-                android:imeOptions="actionDone"
-                android:inputType="textMultiLine"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
                 android:lines="1"
                 android:maxLines="1"
                 android:textColor="@color/header"
@@ -98,7 +98,7 @@
                 android:layout_height="match_parent"
                 android:gravity="start"
                 android:imeOptions="actionDone"
-                android:inputType="textMultiLine"
+                android:inputType="textPassword"
                 android:lines="1"
                 android:maxLines="1"
                 android:textColor="@color/header"
