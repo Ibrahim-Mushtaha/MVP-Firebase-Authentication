@@ -1,0 +1,2 @@
+rootProject.name = "MVP Design Patterns Login Validation"
+include ':app'
