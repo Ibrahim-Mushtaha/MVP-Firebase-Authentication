@@ -2,13 +2,11 @@ package com.ix.ibrahim7.ps.mvpdesignpatternsloginvalidation.presenter.login
 
 import android.app.Activity
 
-class LoginPresenter : LoginContract.Presenter, LoginContract.onLoginListener {
+class LoginPresenter(private var mLoginView: LoginContract.View?) : LoginContract.Presenter, LoginContract.onLoginListener {
 
-    private var mLoginView: LoginContract.View? = null
     private var mLoginInteractor: LoginInteractor? = null
 
-    constructor(mLoginView: LoginContract.View?) {
-        this.mLoginView = mLoginView
+    init {
         mLoginInteractor = LoginInteractor(this)
     }
 

@@ -8,13 +8,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class LoginInteractor : LoginContract.Intractor {
+class LoginInteractor(onLoginListener: onLoginListener?) : LoginContract.Intractor {
 
-    private var mOnLoginListener: onLoginListener? = null
-
-    constructor(onLoginListener: onLoginListener?)  {
-        mOnLoginListener = onLoginListener
-    }
+    private var mOnLoginListener: onLoginListener? = onLoginListener
 
     override fun performFirebaseLogin(activity: Activity?, email: String?, password: String?) {
         CoroutineScope(Dispatchers.IO).launch {
